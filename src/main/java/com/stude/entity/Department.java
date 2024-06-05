@@ -33,4 +33,31 @@ public class Department {
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
     private List<Student> students;
 
+    public Department() {}
+	public Department(
+		@Size(min = 1, max = 20, message = "Department Name Must Should Be Below 20 Characters") String name) {
+		super();
+		this.name = name;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public List<Student> getStudents() {
+		return students;
+	}
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+	
+    
+
 }

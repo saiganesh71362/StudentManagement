@@ -24,7 +24,7 @@ public class RepositoryServiceImpl implements RegisterService {
             return AppConstants.STRING_NULL;
         }
 
-        Integer id = register.getId();
+//        Integer id = register.getId();
         Register newRegister = registerRepository.save(register);
 
         if (newRegister != null && newRegister.getId() != null) {
